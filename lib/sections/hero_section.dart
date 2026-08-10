@@ -1,0 +1,195 @@
+
+
+import 'package:flutter/material.dart';
+import 'package:pdf/pdf.dart';
+import 'package:printing/printing.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'dart:typed_data';
+
+import '../core/colors.dart';
+import '../core/constants.dart';
+import 'resume_viewer.dart';
+
+class HeroSection extends StatelessWidget {
+  const HeroSection({super.key});
+  // Future<void> _launchGitHub(String url) async {
+  //   // final Uri url = Uri.parse("https://github.com/Shithi498");
+  //   final Uri url = Uri.parse(url);
+  //   if (!await launchUrl(
+  //     url,
+  //     mode: LaunchMode.externalApplication,
+  //   )) {
+  //     throw Exception('Could not launch $url');
+  //   }
+  // }
+
+  Future<void> _launchGitHub(String url) async {
+    final uri = Uri.parse(url);
+
+    if (!await launchUrl(
+      uri,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw Exception('Could not launch $url');
+    }
+  }
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(
+        horizontal: 24,
+        vertical: 100,
+      ),
+      child: Wrap(
+        alignment: WrapAlignment.spaceBetween,
+        crossAxisAlignment: WrapCrossAlignment.start, // Fixed: WrapCrossAlignment instead of pw.CrossAxisAlignment
+        spacing: 50,
+        runSpacing: 40,
+        children: [
+          SizedBox(
+         //   width: 550,
+             child:
+             Row(
+
+               //   crossAxisAlignment: CrossAxisAlignment.start, // Fixed: crossAxisAlignment & no 'pw.' prefix
+               children: [
+               SizedBox(
+               width: 550,
+               child:
+               Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                       Text(
+                         "👋 Hello, I'm",
+                         style: textTheme.titleLarge,
+                       ),
+                       const SizedBox(height: 10),
+                       Text(
+                         AppConstants.name,
+                         style: textTheme.displayLarge,
+                       ),
+                       const SizedBox(height: 16),
+                       Text(
+                         AppConstants.designation,
+                         style: textTheme.headlineMedium?.copyWith(
+                           color: AppColors.primary,
+                         ),
+                       ),
+                       const SizedBox(height: 24),
+                       Text(
+                         AppConstants.intro,
+                         style: textTheme.bodyLarge,
+                       ),
+                     ]),),
+                 const SizedBox(height: 40),
+                 const SizedBox(width: 100),
+                 Wrap(
+                   spacing: 16,
+                   runSpacing: 16,
+                   children: [
+
+                     ElevatedButton(
+                       onPressed: () async {
+                         // Explicitly cast to Uint8List
+                         final pdfBytes = await const ResumeViewer().generatePdf(PdfPageFormat.a4) as Uint8List;
+
+                         await Printing.sharePdf(
+                           bytes: pdfBytes,
+                           filename: 'Shithi_Roy_CV.pdf',
+                         );
+                       },
+                       child: const Text("Download CV"),
+                     ),
+                     OutlinedButton(
+                       onPressed: () {
+                         _launchGitHub("https://github.com/Shithi498");
+                       },
+                       child: const Text("GitHub"),
+                     ),
+                     OutlinedButton(
+                       onPressed: () {
+                         _launchGitHub("https://www.linkedin.com/in/shithi-roy-696073271/");
+                       },
+                       child: const Text("LinkedIn"),
+                     ),
+                   ],
+                 ),
+               ],
+             ),
+            // Column(
+            //   crossAxisAlignment: CrossAxisAlignment.start, // Fixed: crossAxisAlignment & no 'pw.' prefix
+            //   children: [
+            //
+            //     Text(
+            //       "👋 Hello, I'm",
+            //       style: textTheme.titleLarge,
+            //     ),
+            //     const SizedBox(height: 10),
+            //     Text(
+            //       AppConstants.name,
+            //       style: textTheme.displayLarge,
+            //     ),
+            //     const SizedBox(height: 16),
+            //     Text(
+            //       AppConstants.designation,
+            //       style: textTheme.headlineMedium?.copyWith(
+            //         color: AppColors.primary,
+            //       ),
+            //     ),
+            //     const SizedBox(height: 24),
+            //     Text(
+            //       AppConstants.intro,
+            //       style: textTheme.bodyLarge,
+            //     ),
+            //     const SizedBox(height: 40),
+            //     Wrap(
+            //       spacing: 16,
+            //       runSpacing: 16,
+            //       children: [
+            //
+            //         ElevatedButton(
+            //           onPressed: () async {
+            //             // Explicitly cast to Uint8List
+            //             final pdfBytes = await const ResumeViewer().generatePdf(PdfPageFormat.a4) as Uint8List;
+            //
+            //             await Printing.sharePdf(
+            //               bytes: pdfBytes,
+            //               filename: 'Shithi_Roy_CV.pdf',
+            //             );
+            //           },
+            //           child: const Text("Download CV"),
+            //         ),
+            //         OutlinedButton(
+            //           onPressed: () {
+            //             _launchGitHub("https://github.com/Shithi498");
+            //           },
+            //           child: const Text("GitHub"),
+            //         ),
+            //         OutlinedButton(
+            //           onPressed: () {
+            //             _launchGitHub("https://www.linkedin.com/in/shithi-roy-696073271/");
+            //           },
+            //           child: const Text("LinkedIn"),
+            //         ),
+            //       ],
+            //     ),
+            //   ],
+            // ),
+          ),
+          // CircleAvatar(
+          //   radius: 130,
+          //   backgroundColor: AppColors.primary,
+          //   child: const CircleAvatar(
+          //     radius: 130,
+          //     backgroundImage: AssetImage("assets/profile_img.jpeg"),
+          //   ),
+          // ),
+        ],
+      ),
+    );
+  }
+}
