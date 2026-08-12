@@ -43,6 +43,7 @@ skills: [
 "JSON-RPC",
 "Firebase",
 "Odoo",
+
 ],
 ),
 

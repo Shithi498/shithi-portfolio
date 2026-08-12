@@ -100,6 +100,11 @@ class NavBar extends StatelessWidget {
               ),
 
               _NavItem(
+                title: "Education",
+                onTap: () => onItemSelected("Education"),
+              ),
+
+              _NavItem(
                 title: "Projects",
                 onTap: () => onItemSelected("Projects"),
               ),

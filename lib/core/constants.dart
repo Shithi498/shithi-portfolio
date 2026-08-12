@@ -9,7 +9,7 @@ class AppConstants {
   static const String phone =
       "+8801762550211";
   static const String intro =
-      "I build beautiful, scalable, and high-performance Flutter applications with clean architecture and responsive UI.";
+      "I specialise in building cross-platform mobile applications.";
 
   static const String email =
       "shithi.roysis@gmail.com";

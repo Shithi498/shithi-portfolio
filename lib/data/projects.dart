@@ -93,20 +93,27 @@ final List<Project> projects = [
 
     technologies: const [
       "Flutter",
+      "Dart",
       "Provider",
-      "Architecture",
-      "MVC",
-      "Backend",
+      "MVC Architecture",
+      "Foreground Service",
+      "Flutter Map",
+      "Permission Handler",
       "JSON-RPC",
+      "REST API",
     ],
 
     features: const [
-      "Geofenced Check-in/Check-out",
+      "Geofence Check-in/Check-out",
       "Background Location Tracking",
-      "Distance Tracking",
-      "Work Hour Tracking",
-      "Automated Timesheet Generation",
+      "Timesheet Generation",
       "History Logging",
+      "Automatic Location Updates to Backend",
+      "Background Location Sync",
+      "Attendance",
+      "Leave Apply",
+      "Task Assign"
+
     ],
 
     image: "assets/sdi.jpg",
@@ -123,18 +130,26 @@ final List<Project> projects = [
 
     technologies: const [
       "Flutter",
-      "Architecture",
-      "MVC",
-      "Backend",
+      "Dart",
+      "MVC Architecture",
       "REST API",
+      "Backend Integration",
+      "Barcode / QR Scanner",
+      "PDF Generation",
+      "Printing",
     ],
 
     features: const [
-      "Inventory Management",
-      "Sales Management",
+      "Sales & Invoice Management",
       "Purchase Management",
-      "Automated Onboarding",
-      "Product Tracking",
+      "Inventory & Stock Management",
+      "Customer & Due Management",
+      "Cash In / Cash Out Tracking",
+      "Sales & Business Reports",
+      "Barcode / QR Code Scanning",
+      "Receipt PDF Generation & Printing",
+      "Payment & Due Tracking",
+      "Product & Category Management",
     ],
 
     image: "assets/sales.png",
@@ -152,9 +167,9 @@ final List<Project> projects = [
     technologies: const [
       "Flutter",
       "Provider",
-      "Architecture",
+
       "MVC",
-      "Backend",
+
       "JSON-RPC",
     ],
 
@@ -177,16 +192,13 @@ final List<Project> projects = [
     title: "Discuss App",
     subtitle: "Enterprise Messaging Platform",
     description:
-    "Built a cross-platform messaging app integrated with Odoo's Discuss module using JSON-RPC. Developed features including real-time chat, group/channel creation, file sharing, message reactions, read receipts, text message and image sharing, and Agora-powered voice and video calling.",
+    "Built a cross-platform messaging app integrated with Odoo's Discuss module using JSON-RPC.Developed features including real-time chat, group/channel creation, file sharing, messagereactions, read receipts, edit message and message unsend. Added one-to-one and group audio/video calling. (",
 
     technologies: const [
       "Flutter",
       "Provider",
-      "Architecture",
       "MVC",
-      "Backend",
       "JSON-RPC",
-      "Agora",
     ],
 
     features: const [
@@ -214,9 +226,7 @@ final List<Project> projects = [
 
     technologies: const [
       "Flutter",
-      "Architecture",
       "MVC",
-      "Backend",
       "REST API",
     ],
 

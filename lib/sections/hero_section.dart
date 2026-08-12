@@ -64,7 +64,7 @@ class HeroSection extends StatelessWidget {
                      crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
                        Text(
-                         "👋 Hello, I'm",
+                        "Hello, I'm",
                          style: textTheme.titleLarge,
                        ),
                        const SizedBox(height: 10),

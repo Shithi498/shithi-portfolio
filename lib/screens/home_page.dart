@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:porfolio_shithi/sections/education.dart';
 import '../core/constants.dart';
 import '../sections/about_section.dart';
 import '../sections/contact_section.dart';
@@ -27,6 +28,7 @@ class HomePage extends StatelessWidget {
   final experienceKey = GlobalKey();
   final projectsKey = GlobalKey();
   final contactKey = GlobalKey();
+  final eduKey = GlobalKey();
 
   // ============================================================
   // THEME COLORS
@@ -193,7 +195,9 @@ class HomePage extends StatelessWidget {
                           // =================================================
                           // PROJECTS
                           // =================================================
-
+                          EducationSection(
+                            key: eduKey,
+                          ),
                           ProjectSection(
                             key: projectsKey,
                           ),
@@ -279,6 +283,10 @@ class HomePage extends StatelessWidget {
 
                             case "Experience":
                               scrollToSection(experienceKey);
+                              break;
+
+                            case "Education":
+                              scrollToSection(eduKey);
                               break;
 
                             case "Projects":

@@ -406,16 +406,16 @@ class ContactSection extends StatelessWidget {
           // MAIN HEADING
           // =====================================================
 
-          Text(
-            "Let's Work Together",
-            textAlign: TextAlign.center,
-
-            style:
-            theme.textTheme.displayMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-              height: 1.15,
-            ),
-          ),
+          // Text(
+          //   "Let's Work Together",
+          //   textAlign: TextAlign.center,
+          //
+          //   style:
+          //   theme.textTheme.displayMedium?.copyWith(
+          //     fontWeight: FontWeight.bold,
+          //     height: 1.15,
+          //   ),
+          // ),
 
           const SizedBox(height: 5),
 
@@ -609,56 +609,56 @@ class ContactSection extends StatelessWidget {
           // SOCIAL LINKS
           // =====================================================
 
-          LayoutBuilder(
-            builder: (context, constraints) {
-
-              if (constraints.maxWidth < 500) {
-                return Column(
-                  children: [
-
-                    SizedBox(
-                      width: double.infinity,
-                      child: _socialButton(
-                        icon: Icons.code,
-                        label: "GitHub",
-                        onTap: launchGitHub,
-                      ),
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    SizedBox(
-                      width: double.infinity,
-                      child: _socialButton(
-                        icon: Icons.business,
-                        label: "LinkedIn",
-                        onTap: launchLinkedIn,
-                      ),
-                    ),
-                  ],
-                );
-              }
-
-              return Row(
-                children: [
-
-                  _socialButton(
-                    icon: Icons.code,
-                    label: "GitHub",
-                    onTap: launchGitHub,
-                  ),
-
-                  const SizedBox(width: 12),
-
-                  _socialButton(
-                    icon: Icons.business,
-                    label: "LinkedIn",
-                    onTap: launchLinkedIn,
-                  ),
-                ],
-              );
-            },
-          ),
+          // LayoutBuilder(
+          //   builder: (context, constraints) {
+          //
+          //     if (constraints.maxWidth < 500) {
+          //       return Column(
+          //         children: [
+          //
+          //           SizedBox(
+          //             width: double.infinity,
+          //             child: _socialButton(
+          //               icon: Icons.code,
+          //               label: "GitHub",
+          //               onTap: launchGitHub,
+          //             ),
+          //           ),
+          //
+          //           const SizedBox(height: 10),
+          //
+          //           SizedBox(
+          //             width: double.infinity,
+          //             child: _socialButton(
+          //               icon: Icons.business,
+          //               label: "LinkedIn",
+          //               onTap: launchLinkedIn,
+          //             ),
+          //           ),
+          //         ],
+          //       );
+          //     }
+          //
+          //     return Row(
+          //       children: [
+          //
+          //         _socialButton(
+          //           icon: Icons.code,
+          //           label: "GitHub",
+          //           onTap: launchGitHub,
+          //         ),
+          //
+          //         const SizedBox(width: 12),
+          //
+          //         _socialButton(
+          //           icon: Icons.business,
+          //           label: "LinkedIn",
+          //           onTap: launchLinkedIn,
+          //         ),
+          //       ],
+          //     );
+          //   },
+          // ),
 
           const SizedBox(height: 30),
 
@@ -666,55 +666,55 @@ class ContactSection extends StatelessWidget {
           // LET'S TALK BUTTON
           // =====================================================
 
-          SizedBox(
-            width: double.infinity,
-            height: 58,
-
-            child: ElevatedButton(
-              onPressed: launchEmail,
-
-              style: ElevatedButton.styleFrom(
-                backgroundColor:
-                const Color(0xFF8B5CF6),
-
-                foregroundColor: Colors.white,
-
-                elevation: 0,
-
-                shape: RoundedRectangleBorder(
-                  borderRadius:
-                  BorderRadius.circular(16),
-                ),
-
-                shadowColor:
-                const Color(0xFFA855F7)
-                    .withOpacity(0.4),
-              ),
-
-              child: const Row(
-                mainAxisAlignment:
-                MainAxisAlignment.center,
-
-                children: [
-
-                  Text(
-                    "Let's Talk",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-
-                  SizedBox(width: 10),
-
-                  Icon(
-                    Icons.arrow_outward,
-                    size: 18,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // SizedBox(
+          //   width: double.infinity,
+          //   height: 58,
+          //
+          //   child: ElevatedButton(
+          //     onPressed: launchEmail,
+          //
+          //     style: ElevatedButton.styleFrom(
+          //       backgroundColor:
+          //       const Color(0xFF8B5CF6),
+          //
+          //       foregroundColor: Colors.white,
+          //
+          //       elevation: 0,
+          //
+          //       shape: RoundedRectangleBorder(
+          //         borderRadius:
+          //         BorderRadius.circular(16),
+          //       ),
+          //
+          //       shadowColor:
+          //       const Color(0xFFA855F7)
+          //           .withOpacity(0.4),
+          //     ),
+          //
+          //     child: const Row(
+          //       mainAxisAlignment:
+          //       MainAxisAlignment.center,
+          //
+          //       children: [
+          //
+          //         Text(
+          //           "Let's Talk",
+          //           style: TextStyle(
+          //             fontSize: 14,
+          //             fontWeight: FontWeight.w600,
+          //           ),
+          //         ),
+          //
+          //         SizedBox(width: 10),
+          //
+          //         Icon(
+          //           Icons.arrow_outward,
+          //           size: 18,
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

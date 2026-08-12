@@ -274,28 +274,28 @@ class ProjectDetailsPage extends StatelessWidget {
                       ),
 
                     // GitHub / Source Button
-                    OutlinedButton.icon(
-                      onPressed: project.isPrivate
-                          ? null
-                          : () {
-                        if (project.githubUrl != null) {
-                          openUrl(project.githubUrl!);
-                        }
-                      },
-                      icon: const Icon(Icons.code, size: 18),
-                      label: Text(project.isPrivate ? "Private Repository" : "Source Code"),
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        disabledForegroundColor: Colors.white38,
-                        side: BorderSide(
-                          color: project.isPrivate
-                              ? Colors.white12
-                              : Colors.white.withOpacity(0.2),
-                        ),
-                        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                      ),
-                    ),
+                    // OutlinedButton.icon(
+                    //   onPressed: project.isPrivate
+                    //       ? null
+                    //       : () {
+                    //     if (project.githubUrl != null) {
+                    //       openUrl(project.githubUrl!);
+                    //     }
+                    //   },
+                    //   icon: const Icon(Icons.code, size: 18),
+                    //   label: Text(project.isPrivate ? "Private Repository" : "Source Code"),
+                    //   style: OutlinedButton.styleFrom(
+                    //     foregroundColor: Colors.white,
+                    //     disabledForegroundColor: Colors.white38,
+                    //     side: BorderSide(
+                    //       color: project.isPrivate
+                    //           ? Colors.white12
+                    //           : Colors.white.withOpacity(0.2),
+                    //     ),
+                    //     padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14),
+                    //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    //   ),
+                    // ),
                   ],
                 ),
                 const SizedBox(height: 36),

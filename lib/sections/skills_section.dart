@@ -99,6 +99,7 @@ class SkillsSection extends StatelessWidget {
           "JSON-RPC",
           "Odoo",
           "NestJS",
+          "TypeScript"
         ],
       ),
 
@@ -189,19 +190,19 @@ class SkillsSection extends StatelessWidget {
           // MAIN HEADING
           // =====================================================
 
-          ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 900,
-            ),
-            child: Text(
-              "I Craft Powerful Mobile Experiences",
-              textAlign: TextAlign.center,
-              style: theme.textTheme.displayMedium?.copyWith(
-                fontWeight: FontWeight.bold,
-                height: 1.15,
-              ),
-            ),
-          ),
+          // ConstrainedBox(
+          //   constraints: const BoxConstraints(
+          //     maxWidth: 900,
+          //   ),
+          //   child: Text(
+          //     "I Craft Powerful Mobile Experiences",
+          //     textAlign: TextAlign.center,
+          //     style: theme.textTheme.displayMedium?.copyWith(
+          //       fontWeight: FontWeight.bold,
+          //       height: 1.15,
+          //     ),
+          //   ),
+          // ),
 
           const SizedBox(height: 5),
 
